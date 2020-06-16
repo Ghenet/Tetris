@@ -55,5 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ))
     }
 
+    //undraw the shape
+    function undraw() {
+        current.forEach(index => (
+            sqaures[currentPosition + index].classList.remove('block')
+        ))
+    }
+
 
 })
