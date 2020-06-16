@@ -3,3 +3,11 @@ div {
     height: 20px;
     width: 20px;
 }
+.grid {
+    background-color: blue;
+    height: 400px;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
