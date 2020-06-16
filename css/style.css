@@ -9,5 +9,7 @@ div {
     width: 200px;
     display: flex;
     flex-wrap: wrap;
-
+}
+.block  {
+    background-color: blue;
 }
