@@ -1,15 +1,19 @@
 div {
-    background-color: yellow;
-    height: 20px;
-    width: 20px;
+  background-color: yellow;
+  height: 20px;
+  width: 20px;
 }
 .grid {
-    background-color: blue;
-    height: 400px;
-    width: 200px;
-    display: flex;
-    flex-wrap: wrap;
+  background-color: blue;
+  height: 400px;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
 }
-.block  {
-    background-color: blue;
+.block {
+  background-color: blue;
+}
+
+.block2 {
+  background-color: purple;
 }
