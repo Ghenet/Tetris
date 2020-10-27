@@ -4,6 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const width = 10;
   const height = 20;
   let currentPosition = 4;
+
+  //assign functions to keycodes
+  function control(e) {
+    if (e.KeyCode === 39) {
+      moveRight();
+    } else if (e.KeyCode === 38) {
+      rotate();
+    } else if (e.KeyCode === 37) {
+      moveLeft();
+    } else if (e.KeyCode === 40) {
+      movedown();
+    }
+  }
+  document.addEventListener("keyup", control);
+
   //The tetriminos
 
   const lTetromino = [
@@ -79,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function moveRight() {
     undraw();
     const isAtRightEdge = current.some(
-      (index) => (currnetPsition + index) % width === width - 1
+      (index) => (currentPosition + index) % width === width - 1
     );
     if (!isAtRightEdge) currentPosition += 1;
     if (
@@ -116,5 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
       currentRotation = 0;
     }
     current = theTetriminoes[random][currentRotation];
+    draw();
   }
+  draw();
 });
