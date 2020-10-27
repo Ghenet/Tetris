@@ -74,4 +74,15 @@ document.addEventListener("DOMContentLoaded", () => {
     draw();
     freeze();
   }
+
+  //move left and prevent collisions with shapes moving left
+  function moveRight() {
+      undraw()
+      const isAtRightEdge = current.some(index => (currnetPsition + index) % width === width - 1)
+      if(!isAtRightEdge) currentPosition += 1
+      if (current.some(index=> squares[currentPosition + index].classList.contains('block2'))){
+          currentPsition -= 1;
+      }
+      draw();
+  }
 });
