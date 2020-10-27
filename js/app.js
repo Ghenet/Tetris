@@ -77,12 +77,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //move left and prevent collisions with shapes moving left
   function moveRight() {
-      undraw()
-      const isAtRightEdge = current.some(index => (currnetPsition + index) % width === width - 1)
-      if(!isAtRightEdge) currentPosition += 1
-      if (current.some(index=> squares[currentPosition + index].classList.contains('block2'))){
-          currentPsition -= 1;
-      }
-      draw();
+    undraw();
+    const isAtRightEdge = current.some(
+      (index) => (currnetPsition + index) % width === width - 1
+    );
+    if (!isAtRightEdge) currentPosition += 1;
+    if (
+      current.some((index) =>
+        squares[currentPosition + index].classList.contains("block2")
+      )
+    ) {
+      currentPsition -= 1;
+    }
+    draw();
+  }
+
+  function moveLeft() {
+    undraw();
+    const isAtLeftEdge = current.some(
+      (index) => (currentPosition + index) % width === 0
+    );
+    if (!isAtLeftEdge) currentPosition -= 1;
+    if (
+      current.some((index) =>
+        squares[currentPosition + index].classList.contains("block2")
+      )
+    ) {
+      currentPosition += 1;
+    }
+    draw();
   }
 });
