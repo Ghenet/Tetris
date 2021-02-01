@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.querySelector(".grid");
+  const displaySquares = document.querySelector(".previous-grid div");
   let sqaures = Array.from(grid.querySelectorAll("div"));
   const width = 10;
   const height = 20;
